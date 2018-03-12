@@ -1,0 +1,27 @@
+#easy admin
+easy_admin:
+#    disabled_actions: ['delete']
+    site_name: "%site_name%"
+    show:
+        max_results: 20
+    list:
+        actions:
+            - { name: 'show', icon: 'eye', label: '' }
+            - { name: 'edit', icon: 'pencil', label: '' }
+            - { name: 'delete', icon: 'trash', label: '' }
+
+    design:
+#        brand_color: '#3C8DBC'
+#        form_theme: ['AppBundle:Form:bootstrap_3_layout.html.twig']
+        menu:
+            - { label: 'Administración', route: 'app_homepage' }
+            - { label: 'Usuarios', entity: User }
+            - { label: 'Producto', entity: Producto }
+            - { label: 'Historial de precios', entity: ProductoPrecio }
+            - { label: 'Historial de stock', entity: ProductoStock }
+            - { label: 'Precio Producto', entity: ProductoPrecio }
+            - { label: 'Categoría de producto', entity: ProductoCategoria }
+            - { label: 'Localidad', entity: Localidad }
+            - { label: 'Cliente', entity: Cliente }
+#        assets:
+#            favicon: 'bundles/app/img/logo.png'

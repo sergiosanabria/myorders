@@ -1,0 +1,30 @@
+easy_admin:
+    entities:
+        ProductoStock:
+            class: AppBundle\Entity\ProductoStock
+            label: 'Historial de stock'
+            disabled_actions: ['edit', 'delete']
+            list:
+                actions:
+                    - { name: 'show', icon: 'eye', label: '' }
+
+                title: 'Listado de %%entity_label%%s'
+                actions:
+                    - { name: 'new', label: 'Nuevo %%entity_label%%' }
+                fields:
+                    - { property: 'cantidad' }
+                    - { property: 'producto' }
+                    - { property: 'activo' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+            form:
+                title:  'Nueva %%entity_label%%'
+                fields:
+                    - cantidad
+                    - { property: 'producto', type_options: { required: true } }
+                    - activo
+#
+            edit:
+                title:  'Editar %%entity_label%%'
+            edit:
+                title:  'Editar %%entity_label%%'

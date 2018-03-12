@@ -1,0 +1,26 @@
+easy_admin:
+    entities:
+        Persona:
+            class: AppBundle\Entity\Persona
+            label: 'Persona'
+            list:
+                title: 'Listado de %%entity_label%%s'
+                actions:
+                    - { name: 'new', label: 'Nuevo %%entity_label%%' }
+                fields:
+                    - { property: 'nombres' }
+                    - { property: 'apellido' }
+                    - { property: 'activo' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+            form:
+                title:  'Nuevo %%entity_label%%'
+                fields:
+                    - nombre
+                    - apellido
+                    - fechaNacimiento
+#
+            edit:
+                title:  'Editar %%entity_label%%'
+            edit:
+                title:  'Editar %%entity_label%%'

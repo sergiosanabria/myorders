@@ -1,0 +1,34 @@
+easy_admin:
+    entities:
+        Producto:
+            class: AppBundle\Entity\Producto
+            label: 'Producto'
+            list:
+                title: 'Listado de %%entity_label%%s'
+                actions:
+                    - { name: 'new', label: 'Nuevo %%entity_label%%' }
+                fields:
+                    - { property: 'nombre' }
+                    - { property: 'descripcion' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.producto_imagenes%' }
+                    - { property: 'activo' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+            form:
+                title:  'Nueva %%entity_label%%'
+                fields:
+                    - nombre
+                    - descripcion
+                    - controlaStock
+                    - cantidad
+                    - precioVenta
+                    - precioCosto
+                    - controlaStock
+                    - categoria
+                    - { property: 'imageFile', type: 'file' }
+                    - activo
+#
+            edit:
+                title:  'Editar %%entity_label%%'
+            edit:
+                title:  'Editar %%entity_label%%'

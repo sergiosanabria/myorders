@@ -1,0 +1,31 @@
+easy_admin:
+    entities:
+        ProductoPrecio:
+            class: AppBundle\Entity\ProductoPrecio
+            label: 'Historial de precio'
+            disabled_actions: ['edit', 'delete']
+            list:
+                actions:
+                    - { name: 'show', icon: 'eye', label: '' }
+
+                title: 'Listado de %%entity_label%%s'
+                actions:
+                    - { name: 'new', label: 'Nuevo %%entity_label%%' }
+                fields:
+                    - { property: 'precio' }
+                    - { property: 'producto' }
+                    - { property: 'activo' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+            form:
+                title:  'Nueva %%entity_label%%'
+                fields:
+                    - precio
+                    - { property: 'precioTipo', type: 'choice', type_options: { choices: { 'Precio de venta':'precio-venta', 'Precio de costo':'precio-costo'}} label: 'Tipo de precio' }
+                    - { property: 'producto', type_options: { required: true } }
+                    - activo
+#
+            edit:
+                title:  'Editar %%entity_label%%'
+            edit:
+                title:  'Editar %%entity_label%%'

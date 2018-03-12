@@ -1,0 +1,22 @@
+easy_admin:
+    entities:
+        Cliente:
+            class: AppBundle\Entity\Cliente
+            label: 'Cliente'
+            list:
+                title: 'Listado de %%entity_label%%s'
+                actions:
+                    - { name: 'new', label: 'Nuevo %%entity_label%%' }
+                fields:
+                    - { property: 'persona' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+            form:
+                title:  'Nuevo %%entity_label%%'
+                fields:
+                    - { property: 'persona', type: AppBundle\Form\PersonaType }
+#
+            edit:
+                title:  'Editar %%entity_label%%'
+            edit:
+                title:  'Editar %%entity_label%%'

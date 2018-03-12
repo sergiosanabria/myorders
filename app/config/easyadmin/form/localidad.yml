@@ -1,0 +1,26 @@
+easy_admin:
+    entities:
+        Localidad:
+            class: AppBundle\Entity\Localidad
+            label: 'Localidad'
+            list:
+                title: 'Listado de %%entity_label%%es'
+                actions:
+                    - { name: 'new', label: 'Nuevo %%entity_label%%' }
+                fields:
+                    - { property: 'nombre' }
+                    - { property: 'codigoPostal' }
+                    - { property: 'activo' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+            form:
+                title:  'Nueva %%entity_label%%'
+                fields:
+                    - nombre
+                    - codigoPostal
+                    - activo
+#
+            edit:
+                title:  'Editar %%entity_label%%'
+            edit:
+                title:  'Editar %%entity_label%%'
